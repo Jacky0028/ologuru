@@ -20,6 +20,7 @@
 #pragma warning(disable:4365) // conversion from 'X' to 'Y', signed/unsigned mismatch
 #endif
 
+//#include "./include/ologuru/loguru.hpp"
 #include "loguru.hpp"
 
 #ifndef LOGURU_HAS_BEEN_IMPLEMENTED
@@ -174,13 +175,13 @@ namespace loguru
 
 	const auto s_start_time = steady_clock::now();
 
-	Verbosity g_stderr_verbosity  = Verbosity_0;
+	Verbosity g_stderr_verbosity  = Verbosity_1;
 	bool      g_colorlogtostderr  = true;
 	unsigned  g_flush_interval_ms = 0;
 	bool      g_preamble_header   = true;
 	bool      g_preamble          = true;
 
-	Verbosity g_internal_verbosity = Verbosity_0;
+	Verbosity g_internal_verbosity = Verbosity_1;
 
 	// Preamble details
 	bool      g_preamble_date     = true;

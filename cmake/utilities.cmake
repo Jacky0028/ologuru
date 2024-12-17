@@ -3,7 +3,7 @@
 
 function(loguru_get_version_from_header)
 
-  file(READ "${CMAKE_CURRENT_LIST_DIR}/loguru.hpp" _hdr_contents)
+  file(READ "${CMAKE_CURRENT_LIST_DIR}/include/ologuru/loguru.hpp" _hdr_contents)
   string(REGEX REPLACE ".*LOGURU_VERSION_MAJOR ([0-9]+).*" "\\1" _version_major "${_hdr_contents}")
   string(REGEX REPLACE ".*LOGURU_VERSION_MINOR ([0-9]+).*" "\\1" _version_minor "${_hdr_contents}")
   string(REGEX REPLACE ".*LOGURU_VERSION_PATCH ([0-9]+).*" "\\1" _version_patch "${_hdr_contents}")
